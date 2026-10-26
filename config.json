@@ -1,0 +1,12 @@
+{
+  "$comment": "Managed automatically when syncing with upstream. Do not edit by hand.",
+  "schema_version": 1,
+  "onboarding_type": "copied",
+  "action_type": "composite",
+  "upstream": {
+    "repository": "jdx/jactionlint",
+    "synced_tag": "v2.3.0",
+    "synced_commit": "a65ab044e916760429068fe5794b8306abdfcbb9",
+    "archived": false
+  }
+}

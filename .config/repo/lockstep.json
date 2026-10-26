@@ -1,0 +1,79 @@
+{
+  "area": "jactionlint",
+  "description": "Tracks sparse, pinned reference snapshots for projects whose detection patterns, scans, and tests inform jactionlint. Pins identify source snapshots; they do not promise API compatibility or runtime interoperability.",
+  "upstreams": {
+    "actionlint": {
+      "submodule": "upstream/actionlint",
+      "repo": "https://github.com/rhysd/actionlint"
+    },
+    "zizmor": {
+      "submodule": "upstream/zizmor",
+      "repo": "https://github.com/zizmorcore/zizmor"
+    },
+    "shellcheck": {
+      "submodule": "upstream/shellcheck",
+      "repo": "https://github.com/koalaman/shellcheck"
+    },
+    "pyflakes": {
+      "submodule": "upstream/pyflakes",
+      "repo": "https://github.com/PyCQA/pyflakes"
+    }
+  },
+  "rows": [
+    {
+      "kind": "version-pin",
+      "id": "actionlint",
+      "upstream": "actionlint",
+      "upgrade_policy": "track-latest",
+      "criticality": 10,
+      "materialization": "sparse",
+      "notes": "Review changed detection source, tests, and pattern fixtures for behavior jactionlint should cover; the historical diagnostics test remains a separate CI regression check, not evidence of candidate coverage.",
+      "pinned_tag": "v1.7.12",
+      "verification": {
+        "script": "scripts/upstream/main.mjs"
+      }
+    },
+    {
+      "kind": "version-pin",
+      "id": "zizmor",
+      "upstream": "zizmor",
+      "upgrade_policy": "track-latest",
+      "criticality": 10,
+      "materialization": "sparse",
+      "notes": "Review changed audit scans, patterns, tests, and audit IDs against jactionlint checks; report newly added audits without a local mapping.",
+      "pinned_tag": "v1.30.1",
+      "verification": {
+        "kind": "audit-inventory",
+        "script": "scripts/upstream/main.mjs"
+      }
+    },
+    {
+      "kind": "version-pin",
+      "id": "shellcheck",
+      "upstream": "shellcheck",
+      "upgrade_policy": "track-latest",
+      "criticality": 8,
+      "materialization": "sparse",
+      "notes": "Review changed ShellCheck patterns, scans, and tests for behavior jactionlint should cover; do not infer API or runtime compatibility from this source pin.",
+      "pinned_tag": "v0.11.0",
+      "verification": {
+        "kind": "source-review",
+        "script": "scripts/upstream/main.mjs"
+      }
+    },
+    {
+      "kind": "version-pin",
+      "id": "pyflakes",
+      "upstream": "pyflakes",
+      "upgrade_policy": "track-latest",
+      "criticality": 8,
+      "materialization": "sparse",
+      "notes": "Review changed Pyflakes patterns, scans, and tests for behavior jactionlint should cover; do not infer API or runtime compatibility from this source pin.",
+      "pinned_tag": "4.0.3",
+      "verification": {
+        "kind": "source-review",
+        "script": "scripts/upstream/main.mjs"
+      }
+    }
+  ]
+}
