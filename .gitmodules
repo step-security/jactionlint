@@ -1,0 +1,36 @@
+# actionlint-v1.7.12 sha256:30a9b942aa2a9c5246d8434d3ad9ff010969d1d4510281c4d395e18665192e6e
+[submodule "upstream/actionlint"]
+	path = upstream/actionlint
+	url = https://github.com/rhysd/actionlint.git
+	ignore = dirty
+	ref = 914e7df21a07ef503a81201c76d2b11c789d3fca # v1.7.12
+	branch = v1.7.12
+	shallow = true
+	sparse-checkout = /*.go /go.mod /go.sum /cmd/** /testdata/err/** /testdata/examples/**
+# zizmor-v1.30.1 sha256:32e54fb73f6172bd53194d25b9270dcd7abe0a44daa97999f000a2d2c8fb9f5c
+[submodule "upstream/zizmor"]
+	path = upstream/zizmor
+	url = https://github.com/zizmorcore/zizmor.git
+	ignore = dirty
+	ref = 99a054ed9283c90abdd2d5b9fb5101d27dde9783 # v1.30.1
+	branch = v1.30.1
+	shallow = true
+	sparse-checkout = /crates/zizmor/src/audit/**
+# shellcheck-v0.11.0 sha256:49f2e5c15f3004997fed25933c06d775899f2bf511a1cdd8234bf16f87f5d772
+[submodule "upstream/shellcheck"]
+	path = upstream/shellcheck
+	url = https://github.com/koalaman/shellcheck.git
+	ignore = dirty
+	ref = aac0823e6b58f8a499e856e93738082691cbf212 # v0.11.0
+	branch = v0.11.0
+	shallow = true
+	sparse-checkout = /src/** /test/** /ShellCheck.cabal /LICENSE
+# pyflakes-4.0.3 sha256:7d08fd90c42b8cdcf449b9777f8389694dff5fa920245b21c1cf636f9cda6c0b
+[submodule "upstream/pyflakes"]
+	path = upstream/pyflakes
+	url = https://github.com/PyCQA/pyflakes.git
+	ignore = dirty
+	ref = 8526af8494a831803bbc1eae24b8f9d2a24aa2f7 # 4.0.3
+	branch = 4.0.3
+	shallow = true
+	sparse-checkout = /pyflakes/** /setup.py /setup.cfg /LICENSE
